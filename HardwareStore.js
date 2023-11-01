@@ -69,11 +69,12 @@ module.exports = class HardwareStore extends Order {
                     aReturn.push(`Total price $${amt.toFixed(2)}`)
                     aReturn.push(`Tax amount $${tax.toFixed(2)}`);
                     aReturn.push(`Your Final bill inclusive tax is $${total.toFixed(2)}.we will text you when we are ready to meet you at curbside.`);
+                    this.stateCur=OrderState.WELCOMING
                     break;
 
                 }
                 else {
-                    aReturn.push("Invalid Input");
+                    aReturn.push("Invalid Input,Please type Yes or No");
                 }
                 break;
 
